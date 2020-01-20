@@ -1,0 +1,111 @@
+*
+{
+    margin: 0 auto;
+}
+@font-face
+{
+    font-family: font1;
+    src: url(FONT/font1.ttf);
+}
+body
+{
+    background-color: #363636;
+    font-family: Calibri;
+}
+header
+{
+    text-align: center;
+    height: 20.8vw;
+    margin-top: 2vw;
+}
+header>h2
+{
+    color: #313c99;
+    font-family: font1;
+    font-size: 7.5vw;
+    position: absolute;
+    z-index: 1000;
+    text-align: center;
+    width: 100%;
+    top: 9vw;
+}
+header>img
+{
+    width: 100%;
+    position: absolute;
+    left: 0%;
+}
+nav 
+{
+    overflow: hidden;
+    background-color: #363636;
+    margin-left: 1vw;
+    position: fixed;
+    z-index: 1000000000;
+    margin-top: 0vw;
+    margin-left: 8vw;
+}
+
+nav>a 
+{
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 1vw;
+    text-decoration: none;
+    font-size: 17px;
+    width: 14vw;
+}
+
+nav>a:hover 
+{
+    background-color: white;
+    color: black;
+}
+
+nav>a.active 
+{
+    background-color: #313c99;
+    color: white;
+    width: 14vw;
+    font-size: 17px;
+}
+hr
+{
+    height: 0.5vw;
+    background-color: white;
+}
+#czas
+{
+    color: white;
+}
+footer
+{
+    color: white;
+    text-align: center;
+}
+main
+{
+    text-align: center;
+    background-image: url(IMG/promocja_background.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+main>a>img
+{
+    width: 25vw;
+}
+main>a
+{
+    width: 25vw;
+}
+main>a:hover 
+{
+    
+}
+footer
+{
+    color: white;
+    text-align: center;
+}

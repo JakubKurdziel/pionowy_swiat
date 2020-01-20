@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+    <head>
+        <meta charset="utf-8">
+        <title>Pionowy Świat</title>
+        <meta name="description" content="Strona dla fanatyków wspinaczki górskiej!">
+        <link rel="stylesheet" href="main_oferta.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="IMG/favicon.png">
+    </head>
+    <body>
+    <nav>
+        <a href="index.html">Główna</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="promocje.html">Promocje</a>
+        <a class="active" href="oferta.html">Oferta</a>
+        <a href="kontakt.html">Kontakt</a>
+    </nav>
+    <hr>
+    <header>
+        <img alt="background" src="IMG/a.JPG" id="obrazek" />
+        <h2>Pionowy Świat</h2>
+    </header>
+        <hr>
+    <main>
+        <br>
+        <img src="IMG/ofer1.png" id="img" alt="oferty">
+        <br>
+        <button onclick="prev()">&#60;</button>
+        <button onclick="next()">&#62;</button>
+    </main>
+        
+    <script>
+        //tło
+        var obrazki = new Array();
+        obrazki[1] = "IMG/a.JPG";
+        obrazki[2] = "IMG/b.JPG";
+        obrazki[3] = "IMG/c.JPG";
+        obrazki[4] = "IMG/d.JPG";
+        obrazki[5] = "IMG/e.JPG";
+        var sekund = 3;
+        var a = 1;
+        function zmien()
+        {
+            var ile = obrazki.length;
+            document.getElementById("obrazek").src = obrazki[a];
+            a++;
+            if(ile==a) 
+            {
+                a=1;
+            }
+        }
+        setInterval("zmien()", sekund*1000);
+        
+        
+        var oferty=new Array("IMG/ofer1.png","IMG/ofer2.png","IMG/ofer3.png");
+        var b=2;
+        function prev()
+        {
+            document.getElementById("img").src = oferty[b];
+            b--;
+            if(b==-1) 
+            {
+                b=2;
+            }
+        }
+        var c=0;
+        function next()
+        {
+            c++;
+            if(c==3) 
+            {
+                c=0;
+            }
+            document.getElementById("img").src = oferty[c];
+        }
+    </script>
+    <hr>
+    <footer>
+        <small>&copy; Copyright 2020, Jakub Kurdziel</small>
+    </footer>
+    </body>
+</html>

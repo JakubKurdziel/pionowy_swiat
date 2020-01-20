@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+    <head>
+        <meta charset="utf-8">
+        <title>Pionowy Świat</title>
+        <meta name="description" content="Strona dla fanatyków wspinaczki górskiej!">
+        <link rel="stylesheet" href="main_kontakt.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="IMG/favicon.png">
+    </head>
+    <body>
+    <script>
+        var x1=0;
+        var x2=0;
+        var x3=0;
+        var x4=0;
+        function imi()
+        {
+            var wyrazenie=/^[a-zA-Z]{2,}$/;
+            var i=document.getElementById("imie").value;
+            var index = i.search(wyrazenie);
+            if(index!=-1)
+                {
+                    document.getElementById("imie").style.backgroundColor="#bdffc6";
+                    var x1=1;
+                }
+            else
+                {
+                    document.getElementById("imie").style.backgroundColor="#ff8282";
+                    var x1=0;
+                }
+        }
+        function nazw()
+            {
+                var wyrazenie=/^[a-zA-Z]{2,}$/;
+                var i=document.getElementById("nazwisko").value;
+                var index = i.search(wyrazenie);
+                if(index!=-1)
+                    {
+                        document.getElementById("nazwisko").style.backgroundColor="#bdffc6";
+                        var x2=1;
+                    }
+                else
+                    {
+                        document.getElementById("nazwisko").style.backgroundColor="#ff8282";
+                        var x2=0;
+                    }
+            }
+        function mail()
+            {
+                var wyrazenie=/^\w{2,}[@]\w{2,}[.]\w{2,}$/;
+                var i=document.getElementById("email").value;
+                var index = i.search(wyrazenie);
+                if(index!=-1)
+                    {
+                        document.getElementById("email").style.backgroundColor="#bdffc6";
+                        var x3=1;
+                    }
+                else
+                    {
+                        document.getElementById("email").style.backgroundColor="#ff8282";
+                        var x3=0;
+                    }
+            }
+        function tele()
+            {
+                var wyrazenie=/^\d{9}$/;
+                var i=document.getElementById("tel").value;
+                var index = i.search(wyrazenie);
+                if(index!=-1)
+                    {
+                        document.getElementById("tel").style.backgroundColor="#bdffc6";
+                        var x4=1;
+                    }
+                else
+                    {
+                        document.getElementById("tel").style.backgroundColor="#ff8282";
+                        var x4=0;
+                    }
+            }
+    </script>    
+    <nav>
+        <a href="index.html">Główna</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="promocje.html">Promocje</a>
+        <a href="oferta.html">Oferta</a>
+        <a class="active" href="kontakt.html">Kontakt</a>
+    </nav>
+    <hr>
+    <header>
+        <img alt="background" src="IMG/a.JPG" id="obrazek" />
+        <h2>Pionowy Świat</h2>
+    </header>
+        <hr>
+    <br>
+    <main>
+            <br>
+            <form>
+                <input onblur="imi()" type="text" name="imie" placeholder="Imię" id="imie">
+                <br><br>
+                <input onblur="nazw()" type="text" name="nazwisko" placeholder="Nazwisko" id="nazwisko">
+                <br><br>
+                <input onblur="mail()" type="text" id="email" name="email" placeholder="E-mail">
+                <br><br>
+                <input onblur="tele()" type="text" name="number" placeholder="Nr. telefonu" id="tel">
+                <p>Data rozpoczęcia wycieczki:</p>
+                <input type="date" name="date">
+                <br><br>
+                <input type="number" name="days" placeholder="Ilość dni">
+                <br><br>
+                <input class="submit" type="submit" value="Wyślij">
+                <input class="reset" type="reset" value="Wyczyść">
+            </form> 
+    </main>
+    <br>
+    <script>
+        //tło
+        var obrazki = new Array();
+        obrazki[1] = "IMG/a.JPG";
+        obrazki[2] = "IMG/b.JPG";
+        obrazki[3] = "IMG/c.JPG";
+        obrazki[4] = "IMG/d.JPG";
+        obrazki[5] = "IMG/e.JPG";
+        var sekund = 3;
+        var a = 1;
+        function zmien()
+        {
+            var ile = obrazki.length;
+            document.getElementById("obrazek").src = obrazki[a];
+            a++;
+            if(ile==a) 
+            {
+                a=1;
+            }
+        }
+        setInterval("zmien()", sekund*1000);
+        
+        //formularz
+    </script>
+    <hr>
+    <footer>
+        <small>&copy; Copyright 2020, Jakub Kurdziel</small>
+    </footer>
+    </body>
+</html>
